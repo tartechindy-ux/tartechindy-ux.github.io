@@ -1,0 +1,49 @@
+name: Generate product art
+
+# Runs daily and on demand. It only spends money when a product in products.js
+# has no image yet, so most daily runs do nothing and cost nothing.
+on:
+  schedule:
+    - cron: "17 9 * * *"   # 09:17 UTC, about 4:17am Indianapolis
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Product id to (re)generate. Leave empty for all missing."
+        required: false
+      force:
+        description: "Regenerate even if art exists"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-art
+  cancel-in-progress: false
+
+jobs:
+  art:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Generate, pick the best, place it
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ONLY: ${{ inputs.only }}
+          FORCE: ${{ inputs.force }}
+        run: |
+          args=()
+          if [ -n "$ONLY" ]; then args+=(--only "$ONLY"); fi
+          if [ "$FORCE" = "true" ]; then args+=(--force); fi
+          python scripts/generate_art.py "${args[@]}"
+      - name: Publish new art to the site
+        run: |
+          git config user.name "malfoid-art-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add art
+          git diff --cached --quiet || (git commit -m "Add generated product art" && git push)
