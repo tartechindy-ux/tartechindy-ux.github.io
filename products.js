@@ -1,5 +1,6 @@
 /* Product pool for the daily picks. Keep this valid JSON between the brackets.
    kind: "3d" = 3D render on a pedestal (toys, collectibles), "setting" = styled scene (clothing, home).
+   badge: optional label on the card, e.g. "Malfoid's favorite".
    desc: what the AI should draw. Describe the item plainly; no brand names, logos or characters. */
 window.POOL = [
  {
@@ -8,9 +9,10 @@ window.POOL = [
   "icon": "🐍",
   "title": "Slytherin House Robe",
   "q": "slytherin robe adult",
-  "blurb": "Green-lined, silver-trimmed, cunning approved.",
+  "blurb": "Swish in properly. Anything less is for Hufflepuffs.",
   "kind": "setting",
-  "desc": "a long black hooded school robe with emerald green satin lining and silver trim"
+  "desc": "a long black hooded school robe with emerald green satin lining and silver trim",
+  "badge": "Malfoid's favorite"
  },
  {
   "id": "slytherin-scarf",
@@ -18,9 +20,10 @@ window.POOL = [
   "icon": "🐍",
   "title": "Slytherin Scarf",
   "q": "slytherin scarf",
-  "blurb": "The classic striped knit for cold dungeon mornings.",
+  "blurb": "I'd hex someone for this scarf. Don't test me.",
   "kind": "setting",
-  "desc": "a chunky knitted scarf with wide emerald green and silver-grey stripes and tassels"
+  "desc": "a chunky knitted scarf with wide emerald green and silver-grey stripes and tassels",
+  "badge": "Malfoid's favorite"
  },
  {
   "id": "slytherin-hoodie",
@@ -28,7 +31,7 @@ window.POOL = [
   "icon": "🐍",
   "title": "Slytherin Hoodie",
   "q": "slytherin hoodie",
-  "blurb": "Everyday house pride, cozy enough for the common room.",
+  "blurb": "Common-room comfy, still terribly superior.",
   "kind": "setting",
   "desc": "a dark emerald green pullover hoodie with silver-grey drawstrings and striped cuffs"
  },
@@ -38,7 +41,7 @@ window.POOL = [
   "icon": "🐍",
   "title": "Slytherin Mug",
   "q": "slytherin mug",
-  "blurb": "Morning potion vessel with serpentine style.",
+  "blurb": "Morning potions taste better from a serpent.",
   "kind": "3d",
   "desc": "a glossy dark green ceramic mug with a sculpted silver serpent handle"
  },
@@ -48,7 +51,7 @@ window.POOL = [
   "icon": "🐍",
   "title": "Slytherin Tie",
   "q": "slytherin tie",
-  "blurb": "Finish the uniform the proper way.",
+  "blurb": "A Slytherin is never improperly knotted.",
   "kind": "setting",
   "desc": "a silk necktie with diagonal emerald green and silver stripes"
  },
@@ -58,7 +61,7 @@ window.POOL = [
   "icon": "🐍",
   "title": "Slytherin Throw Blanket",
   "q": "slytherin throw blanket",
-  "blurb": "Wrap up in emerald and silver.",
+  "blurb": "Dungeon nights are cold. Be cozy, be cunning.",
   "kind": "setting",
   "desc": "a plush emerald green throw blanket with a silver woven border"
  },
@@ -68,9 +71,10 @@ window.POOL = [
   "icon": "⚜️",
   "title": "Draco Malfoy Wand",
   "q": "draco malfoy wand noble collection",
-  "blurb": "Hawthorn and unicorn hair, ten inches of attitude.",
+  "blurb": "Hawthorn, ten inches, reasonably springy. Just like me.",
   "kind": "3d",
-  "desc": "a sleek dark hawthorn wood wand with a plain polished black handle, resting in a velvet-lined collector box"
+  "desc": "a sleek dark hawthorn wood wand with a plain polished black handle, resting in a velvet-lined collector box",
+  "badge": "Malfoid's favorite"
  },
  {
   "id": "lucius-malfoy-wand",
@@ -78,7 +82,7 @@ window.POOL = [
   "icon": "⚜️",
   "title": "Lucius Malfoy Wand",
   "q": "lucius malfoy wand",
-  "blurb": "The serpent-headed cane wand for the true collector.",
+  "blurb": "Father's cane wand. Handle with respect.",
   "kind": "3d",
   "desc": "an elegant black wand with a silver serpent-head handle with tiny green gem eyes"
  },
@@ -88,7 +92,7 @@ window.POOL = [
   "icon": "⚜️",
   "title": "Draco Malfoy Funko Pop",
   "q": "draco malfoy funko pop",
-  "blurb": "Shelf-sized smirk, perfect for the display case.",
+  "blurb": "The smirk, shelf-sized. You're welcome.",
   "kind": "3d",
   "desc": "a small stylized vinyl collectible figurine of a robed wizard with an oversized head, standing beside its windowed display box"
  },
@@ -98,7 +102,7 @@ window.POOL = [
   "icon": "⚜️",
   "title": "Draco Malfoy Figure",
   "q": "draco malfoy action figure",
-  "blurb": "Poseable Malfoy for your collection.",
+  "blurb": "Pose me however you like. I'll still win.",
   "kind": "3d",
   "desc": "a poseable collectible action figure of a wizard student in black robes with green trim, on a display base"
  },
@@ -108,7 +112,7 @@ window.POOL = [
   "icon": "⚜️",
   "title": "Malfoy Manor Décor",
   "q": "malfoy manor decor",
-  "blurb": "Bring a touch of the Manor home.",
+  "blurb": "Make your home feel like the Manor (minus the peacocks).",
   "kind": "setting",
   "desc": "gothic manor home decor: a black wrought-iron candelabra and an ornate silver frame on a dark wood mantel"
  },
@@ -118,7 +122,7 @@ window.POOL = [
   "icon": "⚜️",
   "title": "Draco Malfoy Shirt",
   "q": "draco malfoy shirt",
-  "blurb": "Wear your allegiance proudly.",
+  "blurb": "Wear your allegiance where Potter can see it.",
   "kind": "setting",
   "desc": "a black graphic t-shirt with an abstract silver serpent design"
  },
@@ -128,7 +132,7 @@ window.POOL = [
   "icon": "🪄",
   "title": "Character Wand Collection",
   "q": "harry potter wand noble collection",
-  "blurb": "Replica wands from the films.",
+  "blurb": "Start a collection worthy of Ollivander's back room.",
   "kind": "3d",
   "desc": "a row of five different hand-carved wooden wands on a tiered display stand"
  },
@@ -138,7 +142,7 @@ window.POOL = [
   "icon": "🪄",
   "title": "Interactive Wand",
   "q": "harry potter interactive wand",
-  "blurb": "Wands that respond when you cast.",
+  "blurb": "Cast it and watch it answer. Finally, a wand with manners.",
   "kind": "3d",
   "desc": "a carved wooden wand with a softly glowing light at its tip"
  },
@@ -148,7 +152,7 @@ window.POOL = [
   "icon": "🪄",
   "title": "Wand Display Stand",
   "q": "harry potter wand display stand",
-  "blurb": "Show off the collection in style.",
+  "blurb": "Wands belong on display, not in a drawer.",
   "kind": "3d",
   "desc": "a dark wooden wall-mount display rack holding four wooden wands"
  },
@@ -158,9 +162,10 @@ window.POOL = [
   "icon": "🧱",
   "title": "Hogwarts Castle LEGO",
   "q": "lego harry potter hogwarts castle",
-  "blurb": "The ultimate build for patient witches and wizards.",
+  "blurb": "Build the whole castle. Clear your weekend first.",
   "kind": "3d",
-  "desc": "a large gothic castle with many towers built entirely from small plastic toy building bricks"
+  "desc": "a large gothic castle with many towers built entirely from small plastic toy building bricks",
+  "badge": "Malfoid's favorite"
  },
  {
   "id": "harry-potter-lego-sets",
@@ -168,7 +173,7 @@ window.POOL = [
   "icon": "🧱",
   "title": "Harry Potter LEGO Sets",
   "q": "lego harry potter",
-  "blurb": "From Diagon Alley to the Great Hall.",
+  "blurb": "Diagon Alley, brick by brick.",
   "kind": "3d",
   "desc": "a crooked old-fashioned magic shop street scene built from plastic toy building bricks"
  },
@@ -178,7 +183,7 @@ window.POOL = [
   "icon": "🧱",
   "title": "LEGO Advent Calendar",
   "q": "lego harry potter advent calendar",
-  "blurb": "A wizarding surprise every December day.",
+  "blurb": "A tiny build every December day. Even I approve.",
   "kind": "3d",
   "desc": "an advent calendar box with numbered doors, a few open showing tiny toy-brick winter builds"
  },
@@ -188,7 +193,7 @@ window.POOL = [
   "icon": "📚",
   "title": "Illustrated Editions",
   "q": "harry potter illustrated edition",
-  "blurb": "The full-color editions collectors chase.",
+  "blurb": "The editions serious collectors brag about.",
   "kind": "3d",
   "desc": "a large hardcover illustrated fantasy storybook lying open, showing blank-text pages with a painted castle illustration"
  },
@@ -198,7 +203,7 @@ window.POOL = [
   "icon": "📚",
   "title": "Harry Potter Box Set",
   "q": "harry potter paperback box set",
-  "blurb": "All seven books, ready for a re-read.",
+  "blurb": "All seven. Read them again, I'm better in book six.",
   "kind": "3d",
   "desc": "a boxed set of seven fantasy novels with plain colorful spines in a slipcase, no titles"
  },
@@ -208,7 +213,7 @@ window.POOL = [
   "icon": "📚",
   "title": "Official Cookbook",
   "q": "harry potter cookbook",
-  "blurb": "Feast like it's the start-of-term banquet.",
+  "blurb": "Host a feast worthy of the start-of-term banquet.",
   "kind": "setting",
   "desc": "a hardcover cookbook with a plain cover on a rustic table surrounded by pumpkin pasties and a mug of frothy butterscotch drink"
  },
@@ -218,7 +223,7 @@ window.POOL = [
   "icon": "📚",
   "title": "Film Vault & Art Books",
   "q": "harry potter film vault book",
-  "blurb": "Behind-the-scenes art and props.",
+  "blurb": "Behind the scenes, where the real magic is.",
   "kind": "3d",
   "desc": "a stack of large hardcover film art books with dark plain cloth covers and silver foil edges"
  },
@@ -228,7 +233,7 @@ window.POOL = [
   "icon": "✨",
   "title": "Funko Pop! Collection",
   "q": "harry potter funko pop",
-  "blurb": "Grow the shelf one Pop at a time.",
+  "blurb": "One is never enough. Ask anyone with a shelf.",
   "kind": "3d",
   "desc": "a shelf of assorted small stylized vinyl wizard figurines with oversized heads"
  },
@@ -238,9 +243,10 @@ window.POOL = [
   "icon": "✨",
   "title": "Golden Snitch Replica",
   "q": "golden snitch replica",
-  "blurb": "A Quidditch classic for the desk.",
+  "blurb": "The only Snitch you'll ever catch before Potter.",
   "kind": "3d",
-  "desc": "a small engraved golden ball with thin delicate silver wings, mounted on a display stand"
+  "desc": "a small engraved golden ball with thin delicate silver wings, mounted on a display stand",
+  "badge": "Malfoid's favorite"
  },
  {
   "id": "time-turner-necklace",
@@ -248,9 +254,10 @@ window.POOL = [
   "icon": "✨",
   "title": "Time-Turner Necklace",
   "q": "time turner necklace",
-  "blurb": "For when you need more hours in the day.",
+  "blurb": "For when one day of shopping isn't enough.",
   "kind": "3d",
-  "desc": "a gold pendant necklace with a tiny hourglass inside two rotating rings"
+  "desc": "a gold pendant necklace with a tiny hourglass inside two rotating rings",
+  "badge": "Malfoid's favorite"
  },
  {
   "id": "marauder-s-map-replica",
@@ -268,7 +275,7 @@ window.POOL = [
   "icon": "🕯️",
   "title": "Floating Candles",
   "q": "harry potter floating candles",
-  "blurb": "Great Hall vibes for any room.",
+  "blurb": "Great Hall glow for your own four walls.",
   "kind": "setting",
   "desc": "warm flickering candles floating in mid-air beneath a dark vaulted ceiling"
  },
@@ -278,7 +285,7 @@ window.POOL = [
   "icon": "🕯️",
   "title": "Wizarding Wall Art",
   "q": "harry potter wall art",
-  "blurb": "Decorate like it's your dormitory.",
+  "blurb": "Your room deserves better than Muggle posters.",
   "kind": "setting",
   "desc": "three framed vintage-style art prints of a castle, an owl and a steam train hung on a dark green wall"
  },
@@ -288,7 +295,7 @@ window.POOL = [
   "icon": "🕯️",
   "title": "Hogwarts Lamp & Lights",
   "q": "harry potter lamp",
-  "blurb": "Lumos, but make it décor.",
+  "blurb": "Lumos, but make it decor.",
   "kind": "setting",
   "desc": "a glowing castle-shaped table lamp on a bedside table in a dim cozy room"
  },
@@ -298,7 +305,7 @@ window.POOL = [
   "icon": "🎁",
   "title": "Gifts for Fans",
   "q": "harry potter gifts for adults",
-  "blurb": "Can't-miss presents for any Potterhead.",
+  "blurb": "Gifts they'll actually keep. Trust my taste.",
   "kind": "setting",
   "desc": "a gift box wrapped in emerald paper with silver ribbon, open to show a wand, a striped scarf and a mug"
  },
@@ -308,7 +315,7 @@ window.POOL = [
   "icon": "🎁",
   "title": "Wizarding Board Games",
   "q": "harry potter board game",
-  "blurb": "Game night, Hogwarts edition.",
+  "blurb": "Game night, and yes, Slytherin wins.",
   "kind": "3d",
   "desc": "a fantasy board game laid out with a castle-themed board, cards, dice and small wizard pawns"
  },
@@ -318,7 +325,7 @@ window.POOL = [
   "icon": "🎁",
   "title": "Jelly Beans & Sweets",
   "q": "bertie botts beans",
-  "blurb": "Every flavour. Yes, every flavour.",
+  "blurb": "Every flavour. I dare you.",
   "kind": "3d",
   "desc": "a striped vintage candy box spilling out colorful speckled jelly beans, no text"
  },
@@ -328,7 +335,7 @@ window.POOL = [
   "icon": "🧥",
   "title": "Hogwarts Crest Hoodie",
   "q": "hogwarts hoodie",
-  "blurb": "School spirit you can wear anywhere.",
+  "blurb": "School spirit without the school rules.",
   "kind": "setting",
   "desc": "a charcoal grey hoodie with a plain embroidered heraldic shield patch on the chest"
  },
@@ -338,7 +345,7 @@ window.POOL = [
   "icon": "🧥",
   "title": "Wizarding Socks",
   "q": "harry potter socks",
-  "blurb": "Free the house-elves, keep the socks.",
+  "blurb": "Free an elf, keep the socks.",
   "kind": "setting",
   "desc": "a set of cozy striped socks in green, red, blue and yellow house color pairs"
  },
@@ -348,7 +355,7 @@ window.POOL = [
   "icon": "🧥",
   "title": "Deathly Hallows Jewelry",
   "q": "deathly hallows necklace",
-  "blurb": "The three Hallows, worn close.",
+  "blurb": "The three Hallows, worn close to the heart.",
   "kind": "3d",
   "desc": "a silver geometric pendant necklace on a fine chain, displayed on black velvet"
  },
@@ -358,7 +365,7 @@ window.POOL = [
   "icon": "🎄",
   "title": "Wizarding Ornaments",
   "q": "harry potter christmas ornaments",
-  "blurb": "Deck the tree in house colors.",
+  "blurb": "Deck the tree in house colours.",
   "kind": "setting",
   "desc": "christmas tree ornaments shaped like a wizard hat, an owl, a broomstick and a castle hanging on a pine branch"
  }
