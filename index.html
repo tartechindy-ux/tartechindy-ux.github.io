@@ -182,16 +182,20 @@ document.getElementById("socials").innerHTML = SOCIALS.map(s =>
   `<a href="${s.url}" target="_blank" rel="noopener">${s.icon}${esc(s.name)}</a>`).join("");
 
 // Rumble video of the day
-const VIDEOS = (window.VIDEOS || []).map(v => Array.isArray(v) ? { url: v[0], title: v[1] || "" } : { url: v, title: "" })
-  .filter(v => /^https:\/\/rumble\.com\/embed\/[A-Za-z0-9._-]+\/?/.test(v.url));
+const VIDEOS = (window.VIDEOS || []).map(v =>
+    typeof v === "string" ? { embed: v } : Array.isArray(v) ? { embed: v[0], title: v[1] } : (v || {}))
+  .filter(v => /^https:\/\/rumble\.com\/embed\/[A-Za-z0-9._-]+\/?/.test(v.embed || ""));
 if (VIDEOS.length) {
   const today = new Date();
   const daySeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
   const pick = VIDEOS[(Math.imul(daySeed, 2654435761) >>> 0) % VIDEOS.length];
-  document.getElementById("video-player").src = pick.url;
-  document.getElementById("video-title").textContent = pick.title;
+  document.getElementById("video-player").src = pick.embed;
+  document.getElementById("video-title").textContent = pick.title || "";
   const rumble = SOCIALS.find(s => s.name === "Rumble");
-  document.getElementById("video-more").href = rumble ? rumble.url : "https://rumble.com/";
+  const more = document.getElementById("video-more");
+  const watchOk = /^https:\/\/rumble\.com\//.test(pick.watch || "");
+  more.href = watchOk ? pick.watch : (rumble ? rumble.url : "https://rumble.com/");
+  more.textContent = watchOk ? "watch on Rumble" : "more on Rumble";
   document.getElementById("video-spot").hidden = false;
 }
 
